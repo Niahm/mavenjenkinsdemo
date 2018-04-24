@@ -23,8 +23,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'mvn help:evaluate -Dexpression=project.name | grep "^[^\[]"'
-                sh 'mvn help:evaluate -Dexpression=project.version | grep "^[^\[]"'
+                sh 'mvn help:evaluate -Dexpression=project.name'
+                sh 'mvn help:evaluate -Dexpression=project.version'
             }
         }
     }
